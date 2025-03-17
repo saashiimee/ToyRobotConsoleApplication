@@ -1,0 +1,18 @@
+PLACE 0,0,NORTH
+MOVE
+MOVE
+MOVE
+REPORT
+LEFT
+MOVE
+REPORT
+RIGHT
+RIGHT
+move
+move
+report
+helloW0rLd
+place 1,1,south
+report
+move
+report
