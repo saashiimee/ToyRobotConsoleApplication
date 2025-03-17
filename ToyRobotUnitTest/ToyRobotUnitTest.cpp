@@ -2,6 +2,9 @@
 #include "CppUnitTest.h"
 #include "../ToyRobotConsoleApplication/ToyRobotConsoleApplication.h"
 
+// Add this line to include the function definition if linker error occurs.
+// #include "../ToyRobotConsoleApplication/ToyRobotConsoleApplication.cpp"
+
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace ToyRobotUnitTest
