@@ -4,7 +4,7 @@
 #include <sstream>
 #include <fstream>
 #include <string>
-#include <algorithm>
+#include <algorithm>d
 #include <cctype>
 #include <vector>
 #include "./ToyRobotConsoleApplication.h"
@@ -130,12 +130,15 @@ bool RobotUtilityFunctions::parsePlaceCommand(const std::string& command, int& x
     return true;
 }
 
+// Check if input file exists.
 static inline bool is_input_file_exists(const std::string& name) {
     struct stat buffer;
     return (stat(name.c_str(), &buffer) == 0);
 }
 
+// Process command line input.
 static void process_command_line(Robot& robot, const std::string& read_line) {
+	// Convert to uppercase for case-insensitive comparison.
     std::string line = RobotUtilityFunctions::toUpper(read_line);
     if (line.find("PLACE") == 0) {
         int x, y;
@@ -183,7 +186,7 @@ int main() {
     Robot robot;
     std::string line;
 
-    // Command loop: read from standard input.
+	// Command loop: read from stdin or file.
     while (std::getline(std::cin, line)) {
 		if (is_input_file_exists(line)) {
 			std::ifstream input_file;
